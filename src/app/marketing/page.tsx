@@ -1,15 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { storylines } from "@/data/storylines";
+import Hero from "@/components/Hero";
 import StorylineSelector from "@/components/StorylineSelector";
 import Timeline from "@/components/Timeline";
 import PhoneSimulator from "@/components/PhoneSimulator";
 import ComingSoon from "@/components/ComingSoon";
+import ROISection from "@/components/ROISection";
 import { motion } from "framer-motion";
 
-export default function Home() {
+export default function Marketing() {
   const [activeStoryId, setActiveStoryId] = useState(storylines[0].id);
   const [activeTouchpointIndex, setActiveTouchpointIndex] = useState(0);
 
@@ -22,29 +23,27 @@ export default function Home() {
 
   return (
     <main className="flex-1">
-      {/* Header */}
-      <section className="pt-16 pb-8 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Image src="/spyne-logo.webp" alt="Spyne" width={120} height={36} className="h-8 w-auto" />
-            <span className="text-gray-300">|</span>
-            <span className="text-sm text-gray-500">Follow-Up Sequences</span>
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-            Sample follow-up conversations
-          </h1>
-          <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-            These are real messages sent by Spyne&apos;s AI agent to test leads.
-            Each conversation shows how the agent follows up over multiple days:
-            personalized to the vehicle, aware of the full conversation history,
-            and ready to sell when the customer replies.
-          </p>
-        </div>
-      </section>
+      <Hero />
 
-      {/* Interactive Demo */}
-      <section className="py-10 px-6">
+      {/* Interactive Demo Section */}
+      <section className="py-16 px-6" id="demo">
         <div className="max-w-6xl mx-auto">
+          {/* Section header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Real conversations from our AI agent
+            </h2>
+            <p className="mt-3 text-gray-500 max-w-xl mx-auto">
+              These are actual messages sent to test leads. Click through each
+              storyline to see how the agent adapts its approach.
+            </p>
+          </motion.div>
+
           {/* Storyline selector */}
           <div className="mb-10">
             <StorylineSelector
@@ -75,7 +74,12 @@ export default function Home() {
           {/* Timeline + Phone layout */}
           <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
             {/* Timeline */}
-            <div className="w-full lg:w-[380px] lg:sticky lg:top-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="w-full lg:w-[380px] lg:sticky lg:top-8"
+            >
               <div className="bg-white rounded-2xl border border-gray-200 p-4 shadow-sm">
                 <div className="flex items-center gap-2 mb-4 px-3">
                   <svg
@@ -98,17 +102,22 @@ export default function Home() {
                   onSelect={setActiveTouchpointIndex}
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Phone */}
-            <div className="flex-shrink-0">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex-shrink-0"
+            >
               <PhoneSimulator
                 key={activeStory.id}
                 touchpoints={activeStory.touchpoints}
                 activeTouchpointIndex={activeTouchpointIndex}
                 customerName={activeStory.customerName}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -116,7 +125,12 @@ export default function Home() {
       {/* What's Different callout */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 md:p-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-gray-200 bg-gray-50 p-8 md:p-10"
+          >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               This is not a drip campaign
             </h3>
@@ -146,27 +160,12 @@ export default function Home() {
                 description="Carrier-level STOP handling, DNC list integration, and contact hour enforcement are built in."
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <ComingSoon />
-
-      {/* Footer */}
-      <div className="py-12 px-6">
-        <div className="max-w-4xl mx-auto text-center border-t border-gray-200 pt-8">
-          <div className="flex items-center justify-center gap-2">
-            <Image src="/spyne-logo.png" alt="Spyne" width={28} height={28} />
-            <span className="text-gray-300">|</span>
-            <span className="text-sm text-gray-500">
-              AI Agents for Auto Dealerships
-            </span>
-          </div>
-          <p className="mt-2 text-xs text-gray-400">
-            All conversations shown are from real test interactions with Spyne&apos;s AI agent.
-          </p>
-        </div>
-      </div>
+      <ROISection />
     </main>
   );
 }
