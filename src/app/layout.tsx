@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "Spyne Follow-Up Sequences | AI That Sells While You Sleep",
   description:
     "See how Spyne's AI agent follows up with your leads 8 times over 14 days: personalized, context-aware, and always on.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
