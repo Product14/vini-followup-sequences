@@ -31,7 +31,7 @@ export default function Home() {
             <span className="text-sm text-gray-500">Follow-Up Sequences</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-            Sample follow-up conversations
+            Sample follow-up sequence conversations
           </h1>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
             These are real messages sent by Spyne&apos;s AI agent to test leads.
