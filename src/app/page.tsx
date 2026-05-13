@@ -35,9 +35,9 @@ export default function Home() {
           </h1>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
             These are real messages sent by Spyne&apos;s AI agent to test leads.
-            Each conversation shows how the agent follows up over multiple days:
-            personalized to the vehicle, aware of the full conversation history,
-            and ready to sell when the customer replies.
+            Some run as multi-day drips, others handle a single chat in real
+            time — all personalized to the vehicle, aware of the full
+            conversation history, and ready to sell when the customer replies.
           </p>
         </div>
       </section>
