@@ -101,6 +101,24 @@ function PageOne() {
           <Kpi value="17" label="incremental appointments" caption="Customers your team would have lost" />
         </div>
 
+        <div className="beyond-banner">
+          <div className="beyond-num">
+            <span className="beyond-num-big">7</span>
+            <span className="beyond-num-of">/ 17</span>
+          </div>
+          <div className="beyond-copy">
+            <div className="beyond-title">
+              appointments booked <strong>after day 3</strong> &mdash; added on top.
+            </div>
+            <div className="beyond-sub">
+              A typical BDC playbook covers the first 3 days really well. Vini
+              handles the longer tail &mdash; 14 days of context-aware followup
+              running in the background. 41% of the wins in this window came from
+              that stretch.
+            </div>
+          </div>
+        </div>
+
         <div className="contrast-block">
           <div className="contrast-header">
             <span className="contrast-eyebrow">What Vini is &mdash; and what it isn&apos;t</span>
@@ -689,13 +707,64 @@ function PrintStyles() {
         max-width: 6.5in;
       }
 
+      /* ---------------- "Beyond day 3" banner (cover) ---------------- */
+      .beyond-banner {
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        border: 1px solid var(--brand);
+        background: var(--brand-soft);
+        border-radius: 12px;
+        padding: 12px 18px;
+        break-inside: avoid;
+      }
+      .beyond-num {
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        flex-shrink: 0;
+        color: var(--brand-ink);
+        font-variant-numeric: tabular-nums;
+      }
+      .beyond-num-big {
+        font-size: 32pt;
+        font-weight: 800;
+        line-height: 1;
+      }
+      .beyond-num-of {
+        font-size: 12pt;
+        font-weight: 600;
+        opacity: 0.7;
+      }
+      .beyond-copy {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .beyond-title {
+        font-size: 11pt;
+        line-height: 1.35;
+        color: var(--ink);
+      }
+      .beyond-title strong {
+        color: var(--brand-ink);
+        font-weight: 700;
+      }
+      .beyond-sub {
+        font-size: 9pt;
+        line-height: 1.4;
+        color: var(--ink-mid);
+      }
+
       /* ---------------- Cover contrast block ---------------- */
       .contrast-block {
         margin-top: auto;
         border: 1px solid var(--line);
         border-radius: 12px;
         background: var(--surface);
-        padding: 16px 20px 18px;
+        padding: 14px 18px 16px;
         break-inside: avoid;
       }
       .contrast-header {

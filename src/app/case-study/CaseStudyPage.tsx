@@ -12,6 +12,7 @@ export default function CaseStudyPage() {
       <Header />
       <Hero />
       <ResultsBlock />
+      <IncrementalSection />
       <CadenceSection />
       <RealConversation />
       <SourceBlock />
@@ -229,6 +230,72 @@ function ResultsBlock() {
         </p>
       </div>
     </section>
+  );
+}
+
+/* --------------------- "Beyond day 3" incremental block ------------------ */
+function IncrementalSection() {
+  return (
+    <section className="px-6 pb-16 pt-4">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45 }}
+          className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50/70 via-white to-white p-8 md:p-12"
+        >
+          <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
+            <div className="md:w-1/3 flex flex-col">
+              <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide">
+                Added on top
+              </div>
+              <div className="mt-2 flex items-baseline gap-2">
+                <span className="text-7xl md:text-8xl font-bold text-blue-600 tabular-nums leading-none">
+                  7
+                </span>
+                <span className="text-gray-400 text-xl font-medium">/ 17</span>
+              </div>
+              <div className="mt-2 text-sm font-medium text-gray-700">
+                appointments booked <span className="text-gray-900 font-semibold">after day 3</span>
+              </div>
+              <div className="mt-1 text-xs text-gray-500">
+                41% of all wins in this window
+              </div>
+            </div>
+
+            <div className="md:flex-1">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight tracking-tight">
+                Wins past the standard followup window.
+              </h2>
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                A typical BDC playbook covers the first 3 days really well —
+                that&apos;s where the highest-intent buyers respond, and your team is
+                already doing that work. Vini handles the longer tail: 14 days
+                of context-aware followup running in the background, qualifying
+                and booking replies as they come in. The appointments past day 3
+                are extra wins on top of what your team is already producing.
+              </p>
+              <div className="mt-6 grid grid-cols-2 gap-6 max-w-sm">
+                <BeyondStat number="3 days" label="Typical BDC followup window" />
+                <BeyondStat number="14 days" label="Vini followup window" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function BeyondStat({ number, label }: { number: string; label: string }) {
+  return (
+    <div>
+      <div className="text-base font-bold text-gray-900 tabular-nums leading-tight">
+        {number}
+      </div>
+      <div className="mt-1 text-xs text-gray-500 leading-snug">{label}</div>
+    </div>
   );
 }
 
