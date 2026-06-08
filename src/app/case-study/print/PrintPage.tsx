@@ -80,11 +80,11 @@ function PageOne() {
 
       <div className="cover-body">
         <span className="cover-badge">
-          <span className="dot" /> Real production data · 10-day window · 1 active rooftop
+          <span className="dot" /> Real production data · 1-month window · 1 active rooftop
         </span>
 
         <h1 className="cover-title">
-          1 in 5 dormant internet leads<br />
+          Nearly 1 in 3 dormant internet leads<br />
           <span className="accent">comes back to life.</span>
         </h1>
 
@@ -95,16 +95,16 @@ function PageOne() {
         </p>
 
         <div className="kpi-grid">
-          <Kpi value="785" label="leads followed up" caption="Internet leads received in the window" />
-          <Kpi value="21.5%" label="response rate" caption="Came back into a live SMS conversation" />
-          <Kpi value="10.1%" label="responder → appointment" caption="Of those who replied, booked a visit" />
-          <Kpi value="17" label="incremental appointments" caption="Customers your team would have lost" />
+          <Kpi value="1,672" label="leads followed up" caption="Internet leads received in the window" />
+          <Kpi value="31.9%" label="response rate" caption="Came back into a live SMS conversation" />
+          <Kpi value="9.2%" label="responder → appointment" caption="Of those who replied, booked a visit" />
+          <Kpi value="49" label="incremental appointments" caption="Customers your team would have lost" />
         </div>
 
         <div className="beyond-banner">
           <div className="beyond-num">
-            <span className="beyond-num-big">7</span>
-            <span className="beyond-num-of">/ 17</span>
+            <span className="beyond-num-big">28</span>
+            <span className="beyond-num-of">/ 49</span>
           </div>
           <div className="beyond-copy">
             <div className="beyond-title">
@@ -113,7 +113,7 @@ function PageOne() {
             <div className="beyond-sub">
               A typical BDC playbook covers the first 3 days really well. Vini
               handles the longer tail &mdash; 14 days of context-aware followup
-              running in the background. 41% of the wins in this window came from
+              running in the background. 57% of the wins in this window came from
               that stretch.
             </div>
           </div>
@@ -339,16 +339,17 @@ function PageFour() {
       </table>
 
       <p className="src-caveat">
-        Source data from a single rooftop, 10-day window, US dealership (Sales
+        Source data from a single rooftop, 1-month window, US dealership (Sales
         Inbound). Indicative; results vary by traffic mix.
       </p>
 
       <div className="story-stat src-stat">
         <div>
-          <div className="story-stat-num">3.4x</div>
+          <div className="story-stat-num">1.3x</div>
           <div className="story-stat-label">
             difference between the highest- and lowest-response source &mdash;
-            the agent reads each channel&apos;s context, not a one-size-fits-all template
+            every channel performs in a narrow band, because the agent reads
+            each channel&apos;s context and adapts
           </div>
         </div>
       </div>
@@ -422,9 +423,9 @@ function PageFive() {
 
       <div className="method-block">
         <strong>Methodology.</strong> All numbers come from production data on
-        a single active dealership rooftop, May 6&ndash;16, 2026. Sample
-        messages are real conversations from live customers; names and
-        identifying details have been changed.
+        a single active dealership rooftop (I 40 Autos, Greensboro NC),
+        May 6 &ndash; Jun 5, 2026. Sample messages are real conversations from
+        live customers; names and identifying details have been changed.
       </div>
 
       <PageFooter num={5} total={5} caption="How it works · Methodology" />

@@ -115,11 +115,11 @@ export type SourceResult = {
 };
 
 export const sourceResults: SourceResult[] = [
-  { source: "AutoTrader", responseRate: 41.4, appointmentRate: 3.4 },
-  { source: "Edmunds", responseRate: 30.8, appointmentRate: 7.7 },
-  { source: "Capital One", responseRate: 29.3, appointmentRate: 3.7 },
-  { source: "CarGurus", responseRate: 28.6, appointmentRate: 2.6 },
-  { source: "CarFax", responseRate: 25.4, appointmentRate: 2.5 },
-  { source: "Dealer Website", responseRate: 18.2, appointmentRate: 0 },
-  { source: "Cars.com", responseRate: 15.4, appointmentRate: 3.1 },
+  { source: "AutoBytel", responseRate: 40.0, appointmentRate: 3.3 },
+  { source: "AutoTrader", responseRate: 36.2, appointmentRate: 4.4 },
+  { source: "CarGurus", responseRate: 35.4, appointmentRate: 3.4 },
+  { source: "CarFax", responseRate: 35.3, appointmentRate: 2.8 },
+  { source: "Capital One", responseRate: 34.8, appointmentRate: 4.9 },
+  { source: "Edmunds", responseRate: 34.0, appointmentRate: 3.0 },
+  { source: "Cars.com", responseRate: 31.6, appointmentRate: 2.6 },
 ];

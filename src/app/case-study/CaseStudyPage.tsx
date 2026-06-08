@@ -143,7 +143,7 @@ function Hero() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-xs font-medium text-blue-700 mb-6"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-          Real production data — 10-day window, 1 active rooftop
+          Real production data — 1-month window, 1 active rooftop
         </motion.div>
 
         <motion.h1
@@ -152,7 +152,7 @@ function Hero() {
           transition={{ duration: 0.5, delay: 0.05 }}
           className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight"
         >
-          1 in 5 dormant internet leads
+          Nearly 1 in 3 dormant internet leads
           <br />
           <span className="text-blue-600">comes back to life.</span>
         </motion.h1>
@@ -177,22 +177,22 @@ function Hero() {
 function ResultsBlock() {
   const kpis = [
     {
-      value: "785",
+      value: "1,672",
       label: "leads followed up",
-      caption: "Internet leads received in a 10-day window",
+      caption: "Internet leads received in a 1-month window",
     },
     {
-      value: "21.5%",
+      value: "31.9%",
       label: "response rate",
       caption: "Came back into a live SMS conversation",
     },
     {
-      value: "10.1%",
+      value: "9.2%",
       label: "responder → appointment",
       caption: "Of those who replied, booked a showroom visit",
     },
     {
-      value: "17",
+      value: "49",
       label: "incremental appointments",
       caption: "From leads that would have otherwise gone cold",
     },
@@ -224,7 +224,7 @@ function ResultsBlock() {
           ))}
         </div>
         <p className="mt-6 text-center text-sm text-gray-400 max-w-2xl mx-auto">
-          Every one of these 17 appointments is a customer your BDC team would
+          Every one of these 49 appointments is a customer your BDC team would
           have stopped following up on. Vini is the layer that catches the ones
           your people don&apos;t have time to chase.
         </p>
@@ -252,15 +252,15 @@ function IncrementalSection() {
               </div>
               <div className="mt-2 flex items-baseline gap-2">
                 <span className="text-7xl md:text-8xl font-bold text-blue-600 tabular-nums leading-none">
-                  7
+                  28
                 </span>
-                <span className="text-gray-400 text-xl font-medium">/ 17</span>
+                <span className="text-gray-400 text-xl font-medium">/ 49</span>
               </div>
               <div className="mt-2 text-sm font-medium text-gray-700">
                 appointments booked <span className="text-gray-900 font-semibold">after day 3</span>
               </div>
               <div className="mt-1 text-xs text-gray-500">
-                41% of all wins in this window
+                57% of all wins in this window
               </div>
             </div>
 
@@ -543,7 +543,7 @@ function SourceBlock() {
         </div>
 
         <p className="mt-6 text-center text-xs text-gray-400">
-          Source data from a single rooftop, 10-day window, US dealership
+          Source data from a single rooftop, 1-month window, US dealership
           (Sales inbound). Indicative; results vary by traffic mix.
         </p>
       </div>
